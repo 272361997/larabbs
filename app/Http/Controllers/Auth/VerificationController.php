@@ -23,18 +23,21 @@ class VerificationController extends Controller
 
     /**
      * Where to redirect users after verification.
-     *
+     * 跳转路径修改
      * @var string
      */
     protected $redirectTo = '/';
 
     /**
+     *
      * Create a new controller instance.
      *
      * @return void
      */
     public function __construct()
     {
+
+
         $this->middleware('auth');
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
