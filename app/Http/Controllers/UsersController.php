@@ -13,7 +13,9 @@ class UsersController extends Controller
     {
         $this->middleware('auth',['except' => ['show']]);
     }
+
     /**
+     *
      * 隐性路由模型绑定
      */
     public function show(User $user)
