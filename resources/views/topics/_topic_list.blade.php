@@ -11,7 +11,7 @@
         <div class="media-body">
 
           <div class="media-heading mt-0 mb-1">
-            <a href="{{ route('', [$topic->id]) }}" title="{{ $topic->title }}">
+            <a href="{{ route('topics.show', [$topic->id]) }}" title="{{ $topic->title }}">
               {{ $topic->title }}
             </a>
             <a class="float-right" href="{{ $topic->link() }}">
